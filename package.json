@@ -1,0 +1,8 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:duylongpro99/Starbucks-Next-Version.git",
+  "author": "Long Dao <long.dao@zodinet.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_options",
+  "info": {
+    "singularName": "product-option",
+    "pluralName": "product-options",
+    "displayName": "Product Option",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "is_title": {
+      "type": "boolean",
+      "required": true
+    },
+    "final_price": {
+      "type": "decimal",
+      "required": false
+    },
+    "fix_price": {
+      "type": "decimal",
+      "required": false
+    },
+    "product_option": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-option.product-option",
+      "inversedBy": "product_options"
+    },
+    "product_options": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-option.product-option",
+      "mappedBy": "product_option"
+    },
+    "is_required": {
+      "type": "boolean"
+    },
+    "alias": {
+      "type": "string"
+    }
+  }
+}
